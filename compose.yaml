@@ -1,0 +1,11 @@
+services:
+  web:
+    build: .
+    ports:
+      - "127.0.0.1:${PORT:-8000}:8000"
+    volumes:
+      - task_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  task_data:

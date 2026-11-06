@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edson · Task manager</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+</head>
+<body>
+  <main>
+    <header><p class="eyebrow">EDSON / SIMPLE CRUD</p><h1>A little space to get things done.</h1><p>Create tasks, keep them up to date, and check them off.</p></header>
+    <p id="message" role="status" aria-live="polite"></p>
+    <div class="layout">
+      <section class="panel editor" aria-labelledby="form-heading">
+        <h2 id="form-heading">New task</h2>
+        <form id="task-form">
+          <label for="title">Title</label>
+          <input id="title" name="title" maxlength="120" placeholder="What needs to get done?" required>
+          <label for="description">Description <span>(optional)</span></label>
+          <textarea id="description" name="description" maxlength="2000" rows="5" placeholder="Add a few details…"></textarea>
+          <label class="check"><input id="completed" type="checkbox"> Completed</label>
+          <div class="actions"><button id="save" type="submit">Create task</button><button id="cancel" class="secondary" type="button" hidden>Cancel</button></div>
+        </form>
+      </section>
+      <section class="panel" aria-labelledby="list-heading">
+        <div class="list-heading"><h2 id="list-heading">Your tasks</h2><span id="count" class="badge">0 tasks</span></div>
+        <div id="tasks"><p class="empty">Loading tasks…</p></div>
+      </section>
+    </div>
+    <footer>Simple task manager · Your changes are saved automatically.</footer>
+  </main>
+</body>
+</html>
