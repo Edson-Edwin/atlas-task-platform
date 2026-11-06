@@ -1,4 +1,4 @@
-# Edson Task Manager
+# Task Manager
 
 A simple CRUD project with a browser interface and REST API. Built with Python,
 Flask, SQLite, and plain HTML/CSS/JavaScript. Docker runs the app with Gunicorn
